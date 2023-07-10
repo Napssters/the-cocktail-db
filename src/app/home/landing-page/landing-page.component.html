@@ -1,0 +1,81 @@
+<div class="container mt-5">
+    <app-navbar></app-navbar>
+    <div class="align-items">
+        <div class="row">
+            <div class="col-4 ">
+                <h1 class="title">Drink of the Moment</h1>
+                <p class="description">Gin, also known as gin, is one of the most popular and appreciated alcoholic beverages worldwide, especially for its versatility in cocktails. Originally from Europe, this spirit has evolved over the centuries and comes in a wide range of styles and flavors.</p>
+                <p class="rating">4.9</p>
+            </div>
+            <div class="lineas-fondo"></div>
+            <div class="col-4 box-center-image">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="50" fill="rgb(161, 219, 195)" />
+                </svg>
+            </div>
+            <div class="botella-fondo"></div>
+            <div class="fruta-fondo"></div>
+            <div class="palitos-fondo"></div>
+            <div class="col-4 maqueta">
+                <div class="row maqueta">
+                    <div class="col-5 maqueta" style="height: 130px;">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" height = "☺50px" viewBox="0 0 180 60">
+                            <circle cx="50" cy="30" r="15" fill="rgb(161, 219, 195)" />
+                        <image href="../../../assets/images/water-solid.png" x="40" y="20" width="20" height="20" />
+                        </svg>
+                    </div>
+                    <div class="col-7 maqueta">
+                        <h1 class="title-2">Versatility</h1>
+                        <p class="description">The range of flavors in gin is
+                            exceptionally wide, thanks to the
+                            variety of botanicals that can be
+                            used in its production.</p>
+                    </div>
+                </div>
+                <div class="row maqueta">
+                    <div class="col-5 maqueta" style="height: 130px;">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" height = "☺50px" viewBox="0 0 180 60">
+                            <circle cx="50" cy="30" r="15" fill="rgb(161, 219, 195)" />
+                        <image href="../../../assets/images/cocktail-solid.png" x="40" y="20" width="20" height="20" />
+                        </svg>
+                    </div>
+                    <div class="col-7 maqueta">
+                        <h1 class="title-2">Distiontiv Flavor</h1>
+                        <p class="description">Bittersweet and slightly
+                            woody flavor is the
+                            signature of any gin.</p>
+                    </div>
+                </div>
+                <div class="row maqueta">
+                    <div class="col-5 maqueta" style="height: 130px;">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" height = "☺50px" viewBox="0 0 180 60">
+                            <circle cx="50" cy="30" r="15" fill="rgb(161, 219, 195)" />
+                        <image href="../../../assets/images/Vector.png" x="40" y="20" width="20" height="20" />
+                        </svg>
+                    </div>
+                    <div class="col-7 maqueta">
+                        <h1 class="title-2">Purity</h1>
+                        <p class="description">This gives it a clean, pure feel,
+                            without the caramel or vanilla notes
+                            that come from barrel aging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <app-popular-drinks></app-popular-drinks>
+        <app-popular-ingredients></app-popular-ingredients>
+        <app-latest-drinks></app-latest-drinks>
+        <app-random-ingredients></app-random-ingredients>
+        <app-random-drinks></app-random-drinks>
+    </div>
+    <div class="letters-container change">
+        <div class="letters-title">Search By Letter</div>
+        <div class="letters-bar">
+            <div class="letters-content">
+                <a *ngFor="let letter of letters" class="alphabetLink" (click)="listCocktailsLetter(letter)">{{ letter }}</a>
+            </div>
+        </div>
+    </div>
+</div>

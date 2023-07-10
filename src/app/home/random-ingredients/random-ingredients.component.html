@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <div class="fondo-limon-image"></div>
+    <div class="backgrounds">
+      <div class="row justify-content-center ">
+          <div class="col-md-4 align-item " 
+              *ngFor="let data of dataIngredients.slice(startPosition, endPosition); let i = index;">
+              <div class="curved-text-container">
+                  <div *ngIf="i == positionText">
+                      <svg width="300" height="300" class="curved-text ">
+                          <text font-size="25" fill="black">
+                              <textPath xlink:href="#circlePath">
+                              {{ topic }}
+                              </textPath>
+                          </text>
+                          <path id="circlePath" d="M100,65 a85,85 0 0,1 0,170 a85,85 0 0,1 0,-170" fill="none" transform="rotate(-90 125 125)"></path>
+                      </svg>
+                  </div>
+                  <img class="circular-image" 
+                    [src]="getIngredientImage(data.strIngredient1)"
+                    [style.background-color]="color"
+                    alt="circular image">
+              </div>
+              <p style="color: white;">{{ data.strIngredient1 }}</p>
+          </div>        
+      </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container ">
+    <app-navbar></app-navbar>
+    <div class="row ">
+      <div class="col-4">
+        <div class="row justify-content-center ">
+            <p class="text-container" style="color: black; padding: 5%;">{{ dataCocktail.strDrink }}</p>
+            <div class="align-item-cocktail">
+                <img class="circular-image-cocktail" [src]="dataCocktail.strDrinkThumb + '/preview'" alt="circular image">
+            </div>
+        </div>
+      </div>
+      <div class="col-8 maqueta">
+        <p class="text-ingredient" style="color: black; padding: 5%;">Ingredients</p>
+        <div class="row justify-content-center ">
+            <div class="col-md-4 align-item " *ngFor="let ingredient of ingredients; let i = index;">
+                <div class="curved-text-container">
+                    <img class="circular-image" 
+                      [src]="getIngredientImage(ingredient.strIngredient)"
+                      [style.background-color]="color"
+                      alt="circular image">
+                </div>
+                <p style="color: black;">{{ ingredient.strMeasure + ' ' + ingredient.strIngredient }}</p>
+            </div>        
+        </div>
+      </div>
+    </div>
+    <div class="instructions">
+        <h3 class="centered-heading">Instrucciones</h3>
+        <p class="text">{{ dataCocktail.strInstructions.split('. ') }}</p>
+      </div>
+</div>

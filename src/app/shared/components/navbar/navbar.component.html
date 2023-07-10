@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-transparent">
+  <div class="container mt-5">
+    <a class="navbar-brand" href="#">
+      <img src="../../../../assets/images/Logo.png" alt="Logo" width="130px" height="70px">
+    </a>
+    <ul class="input-group navbar-nav" style="margin: 30px;">
+      <li class="nav-item">
+        <a class="nav-link" href="/home/inicio">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Rewards</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" style="right: 100%;">
+      <li class="nav-item">
+        <div class="input-group rounded-pill">
+          <input #term class="form-control rounded-pill input-with-icon shadow" type="search" placeholder="Search" aria-label="Search"
+            id="searchInput" (keydown.enter)="detail(term.value)">
+          <img src="../../../../assets/images/bookmarks.png" alt="Logo" style="margin: 10px;" width="20px" height="20px">
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

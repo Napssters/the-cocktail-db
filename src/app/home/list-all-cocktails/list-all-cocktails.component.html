@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+    <div class="backgrounds">
+      <div class="row justify-content-center ">
+          <div class="col-md-4 align-item " *ngFor="let data of dataCocktails; let i = index;">
+              <div class="curved-text-container">
+                  <div *ngIf="i == positionText or i == positionText">
+                      <svg width="300" height="300" class="curved-text ">
+                          <text font-size="25" fill="black">
+                              <textPath xlink:href="#circlePath">
+                              {{ topic }}
+                              </textPath>
+                          </text>
+                          <path id="circlePath" d="M100,65 a85,85 0 0,1 0,170 a85,85 0 0,1 0,-170" fill="none" transform="rotate(-90 125 125)"></path>
+                      </svg>
+                  </div>
+                  <img class="circular-image" (click)="detail(data.idDrink)" [ngStyle]="{ 'outline-color': getColor() }" [src]="data.strDrinkThumb + '/preview'" alt="circular image">
+              </div>
+              <p style="color: white; padding: 5%;">{{ data.strDrink }}</p>
+          </div>        
+      </div>
+  </div>
+</div>
+ 
